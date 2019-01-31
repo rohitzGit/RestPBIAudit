@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<tx:annotation-driven/>
+	
+	
+	
+	<!-- JOBS -->
+	<bean id="supportGroupsPeople" class="com.cerner.rest.scheduler.jobs.SupportGroupPeopleJob">  
+		<property name="persistenceManager" ref="persistenceManager" />
+		<property name="restServices" ref="restServices"/>
+	</bean>
+	
+	<bean id="restServices" class="com.cerner.rest.services.RestServices"/>
+	
+	<bean id="jobSupportGroupsPeople" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+  		<property name="targetObject" 	ref="supportGroupsPeople"/>
+  		<property name="targetMethod" 	value="execute"/>
+  		<property name="concurrent" 	value="false"/>
+	</bean>
+	
+	<bean id="simpleTriggerSupportGroups" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" 		ref="jobSupportGroupsPeople" />
+		<property name="repeatInterval" value="1800000" />
+		<property name="startDelay" 	value="1000" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	  	<property name="triggers">
+	    	<list>
+	      		<ref bean="simpleTriggerSupportGroups"/>
+	    	</list>
+	  	</property>
+	</bean>
+
+</beans>

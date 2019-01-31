@@ -1,0 +1,340 @@
+/* .ui-jqgrid .ui-jqgrid-view, .ui-jqgrid .ui-paging-info, .ui-jqgrid .ui-pg-table, .ui-jqgrid .ui-pg-selbox {
+    font-size: 10px;
+}
+
+.ui-jqgrid tr.ui-state-highlight.ui-row-rtl td {
+    border-left-color: #ec1b5a;
+}
+
+.ui-jqgrid-btable .ui-widget-content.ui-priority-secondary {
+    background-image: none;
+    background-color: 
+    opacity: 1;
+}
+
+.ui-jqgrid-btable .ui-widget-content.ui-state-hover {
+    background-image: none;
+    background-color: #EFF4F7;
+    opacity: 1;
+}
+
+.ui-jqgrid-btable .ui-widget-content.ui-state-highlight {
+    background-color: #E4EFC9;
+}
+
+.ui-jqgrid .ui-jqgrid-pager {
+    line-height: 19px;
+    height: 35px;
+    padding-top: 2px!important;
+    padding-bottom: 2px!important;
+    background-color: #eff3f8!important;
+    border-bottom: 1px solid #E1E1E1!important;
+    border-top: 1px solid #E1E1E1!important;
+}
+
+.ui-jqgrid .ui-pg-input {
+    font-size: inherit;
+    width: 15px;
+    height: 10px;
+    line-height: 10px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.ui-jqgrid .ui-pg-selbox {
+    display: block;
+    height: 24px;
+    margin: 0;
+    padding: 1px;
+    line-height: normal;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+    overflow: visible;
+}
+
+.ui-jqgrid .ui-pager-control {
+    height: 50px;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ui-jqgrid .ui-jqgrid-toppager {
+    height: auto!important;
+    background-color: #eff3f8;
+    border-bottom: 1px solid #E1E1E1!important;
+}
+
+.ui-jqgrid .jqgrow .editable {
+    max-width: 90%;
+    max-width: calc(92%)!important;
+}
+
+.ui-pg-table .navtable .ui-corner-all {
+    border-radius: 0;
+}
+
+.ui-jqgrid .ui-pg-button:hover {
+    padding: 1px;
+}
+
+@media only screen and (max-width:767px) {
+    .ui-jqgrid .ui-jqgrid-pager {
+    height: 90px;
+}
+
+.ui-jqgrid  .ui-paging-pager td {
+	padding : 0 0;
+}
+
+.ui-jqgrid .ui-jqgrid-pager>.ui-pager-control {
+	height: 85px;
+	padding-top: 9px;
+}
+
+.ui-jqgrid .ui-jqgrid-pager>.ui-pager-control>.ui-pg-table>tbody>tr>td {
+    vertical-align: top;
+}
+
+.ui-jqgrid .ui-jqgrid-pager>.ui-pager-control>.ui-pg-table>tbody>tr>td#grid-pager_center {
+    width: 0!important;
+    position: static;
+}
+
+.ui-jqgrid .ui-jqgrid-pager>.ui-pager-control>.ui-pg-table>tbody>tr>td#grid-pager_center>.ui-pg-table {
+    margin: 36px auto 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+}@media only screen and (max-width:767px) and (-webkit-min-device-pixel-ratio:0) {
+	.ui-jqgrid .ui-jqgrid-pager>.ui-pager-control>.ui-pg-table>tbody>tr>td#grid-pager_center>.ui-pg-table {
+		width: 500px;
+	}
+}
+
+table {
+	font-family:Arial,Verdana,sans-serif;
+	font-size:1.1em; 
+	color:#000;
+}
+
+th{
+	color:#FFF;
+	text-align: center; 
+	background-color: #74c447;
+	position: relative;
+	line-height: 14px;
+	white-space:nowrap;
+}
+
+
+td{
+	padding-top:10px;
+	border: 0px solid #ccc; 
+	text-align: left;
+	color:#414141;
+	font-weight: normal;
+	font-size:11px;
+	white-space:nowrap;
+}
+
+tr td:nth-of-type(3){
+	text-align:center;
+}
+
+a#sData.fm-button.btn.btn-default.fm-button-icon-left{
+	color:#E4EFC9;
+	background-color:#74c447;
+}
+
+a#cData.fm-button.btn.btn-default.fm-button-icon-left{
+	color:#E4EFC9;
+	background-color:#0d94d2;
+}
+
+#my_btn{
+	background-color: #0d94d2; 
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-family:Arial,Verdana,sans-serif;
+}
+
+.ui-jqgrid .ui-jqgrid-bdiv{
+	position: relative; 
+	margin: 0em; 
+	padding:0; 
+	overflow: auto; 
+	overflow-x:hidden; 
+	overflow-y:auto; 
+	text-align:center;
+}
+
+span.glyphicon.glyphicon-indent-left{
+	display: none;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th{
+	height: 2em !important;
+}
+
+.ui-jqgrid tr.jqgrow td{
+	text-align: center;
+	padding-top:3px;
+}
+
+.ui-jqdialog {
+	display: none;
+	width: 300px;
+	position: absolute;
+	padding: .2em;
+	font-size: 10px;
+	overflow: visible;
+	left: 30% !important;
+	top: 15% !important;              
+}
+
+.ui-jqgrid .ui-jqdialog {
+	font-size: 10px;
+}
+
+.ui-jqdialog-content .CaptionTD{
+	vertical-align: middle;
+	border: 0 none;
+	padding: 2px;
+	white-space: nowrap;
+	font-size:11px;
+}
+
+.EditTable td input, .EditTable td select, .EditTable td textarea{
+	width: 80%;
+	display: inline-block;
+}
+
+.modal-content{
+	border-top: 16px solid #0d94d2;
+	border-bottom:16px solid #0d94d2;
+}
+
+.ui-jqgrid .ui-jqgrid-title {
+    padding-top: 5px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+
+
+.ui-jqgrid .ui-jqgrid-titlebar {
+	height:25px;
+    padding: .3em .2em .2em .3em;
+    position: relative;
+    font-size: 12px;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-top: 0 none;
+}
+
+.ui-jqgrid tr.jqgrow td {
+    font-weight: 500;
+    overflow: hidden;
+    white-space: pre;
+    height: 21px;
+    padding: 1px 2px 1px 2px;
+    border-bottom-width: 1px;
+    border-bottom-color: inherit;
+    border-bottom-style: solid;
+}
+
+.ui-jqgrid .ui-jqgrid-pager .ui-paging-info, .ui-jqgrid .ui-jqgrid-toppager .ui-paging-info {
+    font-weight: normal;
+    height: auto;
+    margin-top: 3px;
+    margin-right: 4px;
+    display: block;
+}
+
+.ui-jqdialog-content .FormGrid {
+    margin: 0;
+    overflow: visible;
+    position: relative;
+}
+
+
+.card_style{
+	color:#2b394f;
+	margin:0px;
+	font-weight:400;
+	font-size:12px;
+	text-align:center;
+}
+
+.mt-100{
+    margin-top:100px;
+}
+    
+.card_list{
+	color:#959ca4;
+	margin:0px;
+	font-weight:600;
+	font-size:18px;
+}
+
+.html{
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+.card_style{
+	color:#2b394f;
+	margin:0px;
+	font-weight:400;
+	font-size:13px;
+	text-align:center;
+}
+
+.mt-100{
+    margin-top:100px;
+}
+    
+.card_list{
+	color:#6a6c6f;
+	margin:0px;
+	font-weight:600;
+	font-size:18px;
+}
+
+.card_list_header{
+	color:#7bc143;
+	margin:0px;
+	font-weight:500;
+	font-size:18px;
+	text-align:center;
+}
+
+div.card-view-more1
+{
+   position: absolute;
+   margin-bottom:40px;
+   bottom: 0;
+   float:left;
+} */
+
+.fm-button {
+    height: 20px;
+    margin: 2px 4px 0 0;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    zoom: 1;
+    display: inline;
+}

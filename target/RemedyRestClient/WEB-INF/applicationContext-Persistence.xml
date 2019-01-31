@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+ <!-- 
+	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url" value="jdbc:sqlserver://RCMBITBYTERS:1433;databaseName=SmallProjects"/>
+        <property name="username" value="spdbuser"/>
+        <property name="password" value="Cerner123"/>
+    </bean>
+    
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>com/cerner/rest/domain/TBL_REM_SUPPORT_GROUPS.hbm.xml</value>
+                <value>com/cerner/rest/domain/TBL_REM_SUPPORT_GRP_PEOPLE.hbm.xml</value>
+                <value>com/cerner/rest/domain/TBL_REST_SERVICE_LOCKS.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+        	<props>
+        		<prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</prop>
+        		<prop key="hibernate.jdbc.batch_size">50</prop>
+        		<prop key="hibernate.show_sql">true</prop>
+        	</props>
+        </property>
+    </bean>
+    
+    <bean id="persistenceManager" class="com.cerner.rest.persistence.PeristenceManager" scope="prototype">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+  -->
+<!-- ***************************************************************************************************************** -->
+<!-- COnnecting to IPD Master -->
+
+<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url" value="jdbc:sqlserver://RCMBITBYTERS:1433;databaseName=IPDMaster"/>
+        <property name="username" value="spdbuser"/>
+        <property name="password" value="Cerner123"/>
+    </bean>
+    
+<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>com/cerner/rest/domain/TBL_REM_SUPPORT_GROUP_WRKLOG.hbm.xml</value>
+                <value>com/cerner/rest/domain/D_WRK_LOG.hbm.xml</value>
+            </list>
+        </property>
+        
+        
+        <property name="hibernateProperties">
+        	<props>
+        		<prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</prop>
+        		<prop key="hibernate.jdbc.batch_size">50</prop>
+        		<!-- <prop key="hibernate.show_sql">true</prop> -->
+        	</props>
+        </property>
+ </bean>
+    
+<bean id="persistenceManager" class="com.cerner.rest.persistence.PeristenceManager" scope="prototype">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+	
+<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+
+</beans>

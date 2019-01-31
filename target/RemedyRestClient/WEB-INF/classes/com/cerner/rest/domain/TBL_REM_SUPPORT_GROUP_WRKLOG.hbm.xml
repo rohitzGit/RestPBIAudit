@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping">
+<hibernate-mapping>
+    <class name="com.cerner.rest.domain.TBL_REM_SUPPORT_GROUP_WRKLOG" table="D_PRBLM_INVSTGTN">
+     <id name="problemId" type="java.lang.String">
+            <column name="PROBLEM_ID" />
+            <generator class="assigned" />
+        </id>   
+    </class>
+</hibernate-mapping>
